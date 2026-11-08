@@ -47,3 +47,4 @@ Chaque entrée correspond à un contrôle de `make doctor`.
   git config --global user.name "Ton Nom"
   git config --global user.email "toi@exemple.fr"
   ```
+- **`make install` échoue** : vérifie `python3 --version` (Python 3.11 à 3.14 supporté) ou utilise une version précise : `make install PYTHON=python3.12`.
