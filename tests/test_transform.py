@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 
-from app.main import load, transform, run
+from app.main import load, run, transform
 
 
 def sample() -> pd.DataFrame:
@@ -32,6 +32,7 @@ def test_transform_drops_stations_without_capacity():
     df = sample()
     df.loc[0, ["bikes_available", "docks_available"]] = 0
     out = transform(df)
+    assert len(out) == 2
     assert 1 not in set(out["station_id"])
 
 

@@ -1,6 +1,6 @@
 # kraken-bootstrap
 
-Job de données servant de fil conducteur aux TP 0–2 et d'entrée de référence pour le type `python` de Kraken.
+Petit job de données (stations de vélos en libre-service → taux de remplissage → Parquet) utilisé comme fil rouge des TP ; il servira aussi de premier job à déployer avec Kraken, le projet du module.
 
 ## Ce que fait le job
 
@@ -47,4 +47,4 @@ Chaque entrée correspond à un contrôle de `make doctor`.
   git config --global user.name "Ton Nom"
   git config --global user.email "toi@exemple.fr"
   ```
-- **`make install` échoue** : vérifie `python3 --version` (Python 3.11 à 3.14 supporté) ou utilise une version précise : `make install PYTHON=python3.12`.
+- **`make install` échoue** : `make doctor` exige Python ≥ 3.11 et les dépendances épinglées supportent Python 3.11 à 3.14. Vérifie `python3 --version`, ou utilise une version précise : `make install PYTHON=python3.12`.
