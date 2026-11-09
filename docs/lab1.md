@@ -1,0 +1,3 @@
+J’ai copié `requirements.txt` et installé les dépendances avant de copier le reste du projet : après une modification de `main.py`, `pip install` apparaît en `CACHED` et le build est passé de 16 s à 2,5 s.
+J’ai utilisé `python:3.12-slim` et ajouté `.venv` dans `.dockerignore` : Docker ne copie plus mon environnement virtuel local et la taille affichée est 602 Mo pour l’image finale.
+J’ai créé l’utilisateur non-root `app` (UID 1000) et donné les droits sur le dossier de sortie ; avec `OUTPUT_DIR=/out` et un volume, le job écrit `out/stations.parquet` sur mon poste.
