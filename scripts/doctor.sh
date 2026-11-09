@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 # Vérifie que le poste est prêt pour le cours.
 set -u
 ok=0
