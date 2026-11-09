@@ -4,7 +4,7 @@ PYTHON ?= python3
 doctor:
 	@./scripts/doctor.sh
 install:
-	$(PYTHON) -m venv .venv && .venv/bin/pip install -q -r requirements-dev.txt
+	$(PYTHON) -m venv .venv && .venv/bin/python -m pip install --no-compile -q -r requirements-dev.txt
 test:
 	.venv/bin/pytest -q
 lint:
